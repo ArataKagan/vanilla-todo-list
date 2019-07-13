@@ -41,5 +41,6 @@ describe('Testing the functionality, this is the checklist', () => {
         todo.addTodo(item2)
         todo.complete(2)
         expect(todo.getItems().find(item => item.id === 2).complete).toBe(true);
-    })
+    }),
+
 })
