@@ -13,30 +13,35 @@
         <form>
             <ul id="incompleted-task" style="list-style:none;">
                 <li>
-                    <input type="checkbox">
-                    <label>Buy groceries</label>
+                    <label class="incomplete-label-container">Buy groceries
+                        <input type="checkbox">
+                        <span class="checkmark"></span>
+                    </label>
                     <i class="icon ion-md-trash"></i>
-                    <i class="icon ion-md-create"></i>
                 </li>
                 <li>
-                    <input type="checkbox">
-                    <label>Do laundry</label>
-                    <i class="icon ion-md-trash"></i>
-                    <i class="icon ion-md-create"></i>
+                        <label class="incomplete-label-container">Do laundry
+                            <input type="checkbox">
+                            <span class="checkmark"></span>
+                        </label>
+                        <i class="icon ion-md-trash"></i>
                 </li>
                 <li>
-                    <input type="checkbox">
-                    <label>Walk dogs</label>
-                    <i class="icon ion-md-trash"></i>
-                    <i class="icon ion-md-create"></i>
+                        <label class="incomplete-label-container">Walk dogs
+                            <input type="checkbox">
+                            <span class="checkmark"></span>
+                        </label>
+                        <i class="icon ion-md-trash"></i>
                 </li>
+               
             </ul>
             <ul id="completed-task" style="list-style:none;">
                     <li>
-                        <input type="checkbox" checked>
-                        <label>Buy groceries</label>
-                        <i class="icon ion-md-trash"></i>
-                        <i class="icon ion-md-create"></i>
+                            <label class="complete-label-container">Buy groceries
+                                <input type="checkbox">
+                                <span class="checkmark"></span>
+                            </label>
+                            <i class="icon ion-md-trash"></i>
                     </li>
                 </ul>
             <input id="new-task" type="text" placeholder="Add task..">
