@@ -20,15 +20,15 @@ li>input[type="checkbox"], label {
     float: left;
 }
 
-label {
+.label {
     float: left;
     width: 7em;
     margin-right: 1em; 
 }
 
-/* incomplete checkbox */
+/* incomplete task list */
 
-.incomplete-label-container {
+.label {
     display: block;
     position: relative;
     padding-left: 35px;
@@ -39,7 +39,7 @@ label {
 }
 
 /* Hide the default checkbox */
-.incomplete-label-container input {
+.label input {
     position: absolute;
     opacity: 0;
     cursor: pointer;
@@ -59,29 +59,30 @@ label {
 }
 
 /* On mouse-over, add a grey background color */
-.incomplete-label-container:hover input ~ .checkmark {
+.label:hover input ~ .checkmark {
     background-color: #ccc;
 }
 
 /* When the checkbox is checked, add a yellow background */
-.incomplete-label-container input:checked ~ .checkmark {
+.label input:checked ~ .checkmark {
     background-color: #f5b342;
 }
+/* 
 
 /* Create the checkmark/indicator (hidden when not checked) */
-.checkmark:after {
+/* .checkmark:after {
     content: "";
     position: absolute;
     display: none;
-}
+} */
 
 /* Show the checkmark when checked */
-.incomplete-label-container input:checked ~ .checkmark:after {
+/* .label input:checked ~ .checkmark:after {
     display: block;
-}
+} */
 
 /* Style the checkmark/indicator */
-.incomplete-label-container .checkmark:after {
+/* .label .checkmark:after {
     left: 9px;
     top: 5px;
     width: 5px;
@@ -89,29 +90,16 @@ label {
     border: solid white;
     border-width: 0 3px 3px 0;
     transform: rotate(45deg);
-}
+} */ 
 
 /* complete checkbox */
 
-.complete-label-container {
-    display: block;
-    position: relative;
-    padding-left: 35px;
-    margin-bottom: 12px;
-    cursor: pointer;
-    font-size: 22px;
-    user-select: none;
+#completed-task .label {
+    text-decoration: line-through;
+    color: #888;
 }
 
-.complete-label-container input {
-    position: absolute;
-    opacity: 0;
-    cursor: pointer;
-    height: 0;
-    width: 0;
-}
-
-.complete-label-container .checkmark {
+#completed-task .checkmark {
     position: absolute;
     top: 0;
     left: 0;
@@ -120,33 +108,10 @@ label {
     background-color: #f5b342;
 }
 
-.complete-label-container:hover input ~ .checkmark {
+#completed-task .label:hover input ~ .checkmark {
     background-color: #ccc;
 }
 
-.complete-label-container input:checked ~ .checkmark {
-    background-color: #eee;
-}
-
-.complete-label-container .checkmark:after {
-    left: 9px;
-    top: 5px;
-    width: 5px;
-    height: 10px;
-    border: solid white;
-    border-width: 0 3px 3px 0;
-    transform: rotate(45deg);
-}
-
-.complete-label-container input:checked ~ .checkmark:after {
-    display: block;
-}
-
-.complete-label-container .checkmark:after {
-    content: "";
-    position: absolute;
-    display: none;
-}
 
 
 li, h3 {
@@ -179,10 +144,21 @@ form {
     margin: 100px auto 0;
 }
 
+
+/* trash icon */
+li .icon {
+    display: none;
+}
+
+li:hover .icon {
+    display: block;
+}
+
+
 /* New Task */
 input#new-task {
     float: center;
-    width: 200px;
+    width: 120px;
     border: 0px;
     font-size: 25px;
 }
