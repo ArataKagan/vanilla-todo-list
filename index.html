@@ -1,53 +1,36 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <title>Todo</title>
-    <link rel="stylesheet" href='./style.css' type="text/css" media="screen" charset="utf-8" />
-    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=PT+Sans" />
-    <link href="https://unpkg.com/ionicons@4.5.10-0/dist/css/ionicons.min.css" rel="stylesheet">
-</head>
-<body>
+<html>
+  <head>
+    <title>Todo App</title>
+    <link href='https://fonts.googleapis.com/css?family=Lato:300,400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="./style.css" type="text/css" media="screen" charset="utf-8">    
+  </head>
+  <body>
     <div class="container">
-        <div class="date"></div>
-        <h3 id="main-title">To Do List</h3>
-        <form>
-            <ul id="incompleted-task">
-                <li>
-                    <label class="label">Buy groceries
-                        <input type="checkbox">
-                        <span class="checkmark"></span>
-                    </label>
-                    <i class="icon ion-md-trash"></i>
-                </li>
-                <li>
-                        <label class="label">Do laundry
-                            <input type="checkbox">
-                            <span class="checkmark"></span>
-                        </label>
-                        <i class="icon ion-md-trash"></i>
-                </li>
-                <li>
-                        <label class="label">Walk dogs
-                            <input type="checkbox">
-                            <span class="checkmark"></span>
-                        </label>
-                        <i class="icon ion-md-trash"></i>
-                </li>
-            </ul>
-            <ul id="completed-task">
-                    <li>
-                        <label class="label">Wash dishes
-                            <input type="checkbox">
-                            <span class="checkmark"></span>
-                        </label>
-                        <i class="icon ion-md-trash"></i>
-                    </li>
-                </ul>
-            <input id="new-task" type="text" placeholder="Add task..">
-            <i class="icon ion-md-send"></i>
-            
-        </form>
+        <div>
+            <input id="new-task" type="text">
+            <button id='add'>Add</button>
+        </div>
+      
+      <ul id="task-list">
+        <li>
+          <input type="checkbox">
+          <label>Pay Bills</label>
+          <button class="delete">Delete</button>
+        </li>
+        <li class="editMode">
+          <input type="checkbox">
+          <label>Go Shopping</label>
+          <button class="delete">Delete</button>
+        </li>
+      </ul>
+
+      <div id="button-list">
+          <button>All</button>
+          <button>Still Working</button>
+          <button>Completed</button>
+      </div>
     </div>
-</body>
-<script src='ToDo.js'></script>
+  </body>
+  <script src="ToDo.js"></script>
 </html>
