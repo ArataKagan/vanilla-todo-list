@@ -1,5 +1,6 @@
 body {
-   background: #fff;
+   background: #edf0f1;
+   font-family: 'Lato', sans-serif;
 }
 
 .container {
@@ -10,12 +11,40 @@ body {
 
 #new-task {
     width: 291px;
-    height: 53px
+    height: 53px;
+    box-shadow: 10px 10px 5px #D3D3D3;
+    border: none;
+}
+
+#new-task::placeholder {
+    font-size: 20px;
+    color: #D3D3D3;
+    text-indent: 10px;
 }
 
 #add {
-    width: 76px;
-    height: 53px;
+    width: 59px;
+    height: 59px;
+    margin-left: 20px;
+    border: none;
+    position: relative;
+    border-radius: 30px;
+    top: 22px;
+    background: #ffad33;
+}
+
+body button svg {
+    width: 16px;
+    height: 16px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: -8px 0 0 -8px;
+}
+
+body button svg .fill {
+    fill: white;
+    border-color: black;
 }
 
 #task-list {
@@ -25,7 +54,6 @@ body {
 #task-list li {
     padding: 10px;
 }
-
 
 ul {
     margin: 0;
@@ -40,3 +68,20 @@ li, h3 {
     clear:both;
     list-style:none;
 }
+
+#button-list {
+    position: relative;
+    top: 24px;
+}
+
+#select-all, #incompleted, #completed {
+    position: aboslute;
+    top: 10px;
+    background-color: #edf0f1;
+    border: none;
+    color: #ffad33;
+    font-size: 20px;
+}
+
+/* checkbox */ 
+

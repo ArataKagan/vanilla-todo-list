@@ -85,7 +85,6 @@ function selectCompleted(){
     }
 }
 
-
 selectAllButton.addEventListener('click', showAll);
 incompletedButton.addEventListener('click', selectIncompleted);
 completedButton.addEventListener('click', selectCompleted);
