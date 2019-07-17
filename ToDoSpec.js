@@ -1,46 +1,23 @@
-describe('Testing the functionality, this is the checklist', () => {
-    it('should add an item', () => {
-        let todo = new ToDo();
-        let item = {
-            title: "do laundry",
-            complete: false
-        }
-        const done = todo.addTodo(item);
-        expect(todo.getItems().length).toBe(1);
-    }),
-    it('should delete an item', () => {
-        let todo = new ToDo();
-        let item = {
-            id: 1,
-            title: "wash dishes",
-            complete: false
-        }
-        let item2 = {
-            id: 2,
-            title: "walk dog",
-            complete: false
-        }
-        todo.addTodo(item)
-        todo.addTodo(item2)
-        todo.delete(2)
-        expect(todo.getItems()[todo.getItems().length-1].id).toBe(1);
-    }),
-    it('should mark item as complete', () => {
-        let todo = new ToDo();
-        let item = {
-            id: 1,
-            title: "wash dishes",
-            complete: false
-        }
-        let item2 = {
-            id: 2,
-            title: "pick up puppies",
-            complete: false
-        }
-        todo.addTodo(item)
-        todo.addTodo(item2)
-        todo.complete(2)
-        expect(todo.getItems().find(item => item.id === 2).complete).toBe(true);
-    }),
+describe('Testing the todo functionality', () => {
+   it("checkbox checked correctly", () => {
+    document.body.innerHTML = 
+    `<ul id="task-list">
+        <li class="unchecked">
+          <input type="checkbox" class="checkbox">
+          <label>Pay Bills</label>
+          <button class="delete">Delete</button>
+        </li>
+        <li class="unchecked">
+          <input type="checkbox" class="checkbox">
+          <label>Go Shopping</label>
+          <button class="delete">Delete</button>
+        </li>
+      </ul>`;
+      const checkbox = document.querySelectorAll('.checkbox');
+      const list = document.querySelectorAll('.unchecked');
+      checkbox[0].click();
+      expect(list[0].classList.value).toBe('unchecked');
+
+   })
 
 })

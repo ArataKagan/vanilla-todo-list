@@ -1,0 +1,22 @@
+{
+  "name": "honeyb-vanilla-todo",
+  "version": "1.0.0",
+  "description": "vanilla js todo app",
+  "main": "index.html",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ArataKagan/vanilla-todo-list.git"
+  },
+  "author": "Arata Kagan",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ArataKagan/vanilla-todo-list/issues"
+  },
+  "homepage": "https://github.com/ArataKagan/vanilla-todo-list#readme",
+  "devDependencies": {
+    "jest": "^24.8.0"
+  }
+}
