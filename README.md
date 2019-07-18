@@ -4,8 +4,6 @@
 
 This is a to-do list app made with vanilla JavaScript, CSS and HTML. 
 
---
-
 ## How to Clone 
 
 1. `git clone https://github.com/ArataKagan/vanilla-todo-list`
@@ -17,7 +15,6 @@ This is a to-do list app made with vanilla JavaScript, CSS and HTML.
 1. Go to the vanilla-todo-list directory 
 2. `npm run test`
 
--- 
 ## Existing Features 
 
 1. Add a task 
