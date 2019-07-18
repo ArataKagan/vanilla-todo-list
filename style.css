@@ -9,11 +9,16 @@ body {
     margin: 100px auto 0;
 }
 
+/* task input */
+
 #new-task {
     width: 291px;
     height: 53px;
     box-shadow: 10px 10px 5px #D3D3D3;
     border: none;
+    color:	#696969;
+    text-indent: 10px;
+    font-size: 20px;
 }
 
 #new-task::placeholder {
@@ -31,9 +36,10 @@ body {
     border-radius: 30px;
     top: 22px;
     background: #ffad33;
+    cursor: pointer;
 }
 
-body button svg {
+body button#add svg {
     width: 16px;
     height: 16px;
     position: absolute;
@@ -42,37 +48,137 @@ body button svg {
     margin: -8px 0 0 -8px;
 }
 
-body button svg .fill {
+body button#add svg .fill {
     fill: white;
     border-color: black;
 }
 
-#task-list {
-    padding: 30px;
-}
-
-#task-list li {
-    padding: 10px;
-}
+/* task list */
 
 ul {
     margin: 0;
     padding: 0;
 }
 
-li * {
-    float: left;
+#task-list {
+    padding: 30px;
+    margin-top: 30px;
 }
+
+#task-list li {
+    padding: 0 100px 0 0;
+    position: relative;
+} 
+
 
 li, h3 {
     clear:both;
     list-style:none;
+    height: 50px;
 }
 
+ul .checked .task-label{
+    text-decoration: line-through;
+    color: #888;
+}
+
+/* checkbox */ 
+.checkbox-container {
+    position: relative;
+    user-select: none;
+}
+
+.checkbox {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+.custom-checkbox {
+    position: absolute;
+    top: 0;
+    left: -36px;
+    height: 25px;
+    width: 25px;
+    background-color: white;
+} 
+
+.custom-checkbox:hover {
+    background-color: #ccc;
+}
+
+.checkbox-container input:checked ~ .custom-checkbox {
+    background-color: #ffad33;
+}
+
+.custom-checkbox:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+.checkbox-container input:checked ~ .custom-checkbox:after {
+    display: block;
+}
+
+.checkbox-container .custom-checkbox:after {
+    left: 9px;
+    top: 5px;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    transform: rotate(45deg);
+}
+
+/* delete button */
+ul .outer-delete {
+    position: absolute;
+    top: -5px;
+    right: 19px;
+}
+
+ul .outer-delete button {
+    width: 25px;
+    height: 25px;
+    float: left;
+    background: none;
+    border: 0px;
+    box-shadow: none;
+    outline: none;
+    appearance: none;
+}
+
+ul .outer-delete button svg{
+    width: 25px;
+    height: 25px;
+    float: left;
+    background: none;
+    border: 0px;
+    box-shadow: none;
+    outline: none;
+    appearance: none;
+    cursor: pointer;
+}
+
+ul .outer-delete button svg .fill{
+    color: black;
+}
+
+/* ul .outer-delete button svg {
+    width: 50px;
+    height
+} */
+
+
+/* button list */
 #button-list {
     position: relative;
     top: 24px;
 }
+
 
 #select-all, #incompleted, #completed {
     position: aboslute;
@@ -82,6 +188,3 @@ li, h3 {
     color: #ffad33;
     font-size: 20px;
 }
-
-/* checkbox */ 
-
